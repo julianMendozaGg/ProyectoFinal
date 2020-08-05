@@ -3,8 +3,8 @@ class LectorArchivo():
     def __init__(self):
         self.data=[]
         self.matriz=[]
-        self.filas = 9
-        self.columnas = 9
+        self.filas = 10
+        self.columnas = 10
 
     def leerNivel(self, path):
         f = open(path, 'r')
@@ -17,14 +17,19 @@ class LectorArchivo():
     def devolverMatriz(self,path):
         self.leerNivel(path)
 
-        for i in range(self.filas):
-            self.matriz.append([0]*self.columnas)
+        '''for i in range(self.filas):
+        self.matriz.append([0]*self.columnas)'''
+
+        
 
         for i in range(len(self.data)-1):
             for j in range(len(self.data[0])-1):
-                self.matriz.append(int(self.data[i][j]))
+                self.matriz[i][j]== int(self.data[i][j])
 
         return self.matriz
+
+
+    
 
 
 
