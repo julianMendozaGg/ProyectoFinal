@@ -31,13 +31,13 @@ class ConcreteImplementation1(Implementation):
         for i in range(len(prod)-1):
             for j in range (len(prod)-1):
                 if prod[i][j] == "0":
-                    p.draw.rect(self.ventana,self.VERDE,(self.X,self.Y,50,50))
+                    p.draw.rect(self.ventana,self.VERDE,(self.X,self.Y,70,70))
                 elif prod [i][j] == "1":
-                    p.draw.rect(self.ventana,self.ROJO,(self.X,self.Y,50,50))
+                    p.draw.rect(self.ventana,self.ROJO,(self.X,self.Y,70,70))
 
-                self.X = self.X + 10
+                self.X = self.X + 50
             
-            self.Y= self.Y + 10
+            self.Y= self.Y + 50
             self.X=50
         
                 
