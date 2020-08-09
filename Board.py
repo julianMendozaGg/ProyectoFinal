@@ -5,3 +5,6 @@ class Board():
 
     def pintar(self):
         return self.pintado.entregarlvl1()
+
+    
+

@@ -14,20 +14,7 @@ class LectorArchivo():
 
         return self.data
 
-    def devolverMatriz(self,path):
-        self.leerNivel(path)
-
-        '''for i in range(self.filas):
-        self.matriz.append([0]*self.columnas)'''
-
-        
-
-        for i in range(len(self.data)-1):
-            for j in range(len(self.data[0])-1):
-                self.matriz[i][j]== int(self.data[i][j])
-
-        return self.matriz
-
+    
 
     
 
