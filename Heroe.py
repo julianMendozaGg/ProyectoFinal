@@ -7,13 +7,13 @@ class Heroe():
     def __init__(self, ventana):
         self.vida= 100
         self.puntos = 0
-        self.velocidad = 20
+        self.velocidad = 9
         self.sentido = 0
         self.obj = ConcreteImplementation1(ventana)
         #copy from set_srpite
         self.obj.pintarNivel()
         self.pos = self.obj.positions[0]
-        self.posX = self.pos [0]
+        self.posX = self.pos [0] 
         self.posY = self.pos [1]
         self.rect= p.Rect(self.posX, self.posY , 35, 35)
 
@@ -27,14 +27,19 @@ class Heroe():
     
     def moveDer(self):
         pressed = p.key.get_pressed()
-        for i in self.obj.rectangles:
-            if pressed[p.K_RIGHT] and not self.rect.colliderect(self.obj.rectangles[i]):
+        if self.rect.collidelist(self.obj.rectangles) < 0:
+            if pressed[p.K_RIGHT]:
                 self.posX = self.posX + self.velocidad
+        else:
+            self.posX= self.posX - 1
     
     def moverIzq(self):
         pressed =p.key.get_pressed()
-        if pressed[p.K_LEFT]:
-            self.posX = self.posX - self.velocidad
+        if self.rect.collidelist(self.obj.rectangles) < 0:
+            if pressed[p.K_LEFT]:
+                self.posX = self.posX - self.velocidad
+        
+    
 
     def moveUp(self):
         pressed = p.key.get_pressed()

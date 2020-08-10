@@ -5,7 +5,7 @@ from Musica.chainMusic import *
 from Musica.AsignarSucesor import *
 from Heroe import *
 
-ventana = p.display.set_mode ((800,800),p.RESIZABLE)
+ventana = p.display.set_mode ((900,800),p.RESIZABLE)
 
 board = Board(ventana)
 p.display.set_caption("zombIES")
@@ -29,7 +29,7 @@ while state:
     ventana.fill(NEGRO)
     board.pintar()
     p.draw.rect(ventana, NEGRO, perso.update())
-    timer.tick(20)
+    timer.tick(30)
     p.display.update()
     
     

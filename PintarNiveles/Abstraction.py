@@ -39,14 +39,14 @@ class ConcreteImplementation1(Implementation):
             for j in range(len(prod)):
                 if prod[i][j] == "0":
                     p.draw.rect(self.ventana, self.VERDE,
-                                (self.X, self.Y, 70, 70))
-                    self.rectangles.append(p.rect)
+                                (self.X, self.Y, 80, 80))
+                    self.rectangles.append(p.Rect(self.X,self.Y,80,80))
                 elif prod[i][j] == "1":
                     p.draw.rect(self.ventana, self.ROJO,
-                                (self.X, self.Y, 70, 70))
+                                (self.X, self.Y, 80, 80))
                     self.positions.append((self.X, self.Y))
 
-                self.X = self.X + 70
+                self.X = self.X + 80
 
-            self.Y = self.Y + 70
+            self.Y = self.Y + 80
             self.X = 50
