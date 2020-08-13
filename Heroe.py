@@ -27,29 +27,44 @@ class Heroe():
     
     def moveDer(self):
         pressed = p.key.get_pressed()
-        if self.rect.collidelist(self.obj.rectangles) < 0:
+        if self.rect.collidelist(self.obj.rectangles) < 0 :
             if pressed[p.K_RIGHT]:
                 self.posX = self.posX + self.velocidad
         else:
-            self.posX= self.posX - 1
+            if self.rect.collidelist(self.obj.rectangles) >= 0 and self.posX>700 or pressed[p.K_RIGHT] :
+
+                self.posX= self.posX - 15
     
     def moverIzq(self):
         pressed =p.key.get_pressed()
-        if self.rect.collidelist(self.obj.rectangles) < 0:
+        if self.rect.collidelist(self.obj.rectangles) < 0 :
             if pressed[p.K_LEFT]:
                 self.posX = self.posX - self.velocidad
+        else:
+            if self.rect.collidelist(self.obj.rectangles) >= 0 and self.posX<140 or pressed[p.K_LEFT]:
+                self.posX=self.posX+15
         
     
 
     def moveUp(self):
         pressed = p.key.get_pressed()
-        if pressed [p.K_UP]:
-            self.posY = self.posY - self.velocidad
+        if self.rect.collidelist(self.obj.rectangles) < 0:
+            if pressed [p.K_UP]:
+                self.posY = self.posY - self.velocidad
+        else:
+            if self.rect.collidelist(self.obj.rectangles) >= 0 and self.posY<140 or pressed[p.K_UP]:
+                self.posY=self.posY+15
 
     def moveDown(self):
         pressed = p.key.get_pressed()
-        if pressed [p.K_DOWN]:
-            self.posY = self.posY + self.velocidad
+        if self.rect.collidelist(self.obj.rectangles) < 0:
+            if pressed[p.K_DOWN]:
+                self.posY = self.posY + self.velocidad
+
+        else:
+            if self.rect.collidelist(self.obj.rectangles) >= 0 and self.posY > 700 or pressed[p.K_DOWN]:
+                self.posY = self.posY - 15
+
 
     def update(self):
         self.moveDer()
