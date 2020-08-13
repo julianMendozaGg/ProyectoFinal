@@ -7,8 +7,7 @@ class Nivel():
 
 class NivelFacil(Nivel):
     def crear(self):
-        return self.lector.leerNivel("C:/Users/Julian/Documents/UD/4"+ 
-        " Semestre/Modelos de Programación/ZombScapeS/CreadorDeNiveles/game.txt")
+        return self.lector.leerNivel("CreadorDeNiveles/game.txt")
 
 
 class NivelMedio(Nivel):
