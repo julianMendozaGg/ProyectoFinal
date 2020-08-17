@@ -8,36 +8,36 @@ class AbstractFactory():
 
 class WarriorFactory(AbstractFactory):
 
-    def moverAbajo(self):
+    def moverAbajo():
         abajo = AbajoWarrior()
         return abajo.getSprites()
 
-    def moverArriba(self):
+    def moverArriba():
         arriba = ArribaWarrior()
         return arriba.getSprites()
 
-    def moverDer(self):
+    def moverDer():
         der = DerWarrior()
         return der.getSprites()
 
-    def moverIzq(self):
+    def moverIzq():
         izq = IzqWarrior()
         return izq.getSprites()
 
 class QueenFactory(AbstractFactory):
 
-    def moverAbajo(self):
+    def moverAbajo():
         abajo = AbajoQueen()
         return abajo.getSprites()
 
-    def moverArriba(self):
+    def moverArriba():
         arriba = ArribaQueen()
         return arriba.getSprites()
 
-    def moverDer(self):
+    def moverDer():
         der = DerQueen()
         return der.getSprites()
 
-    def moverIzq(self):
+    def moverIzq():
         izq = IzqQueen()
         return izq.getSprites()
